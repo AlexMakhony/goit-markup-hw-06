@@ -583,6 +583,86 @@ img {
   fill: var(--white-color);
 }
 
+/* New DIV from HW6 Sign Us */
+
+.sign-part {
+display: block;
+margin-left: 93px;
+}
+
+.sign-part-text {
+  display: flex;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-color);
+}
+
+.sign-part-form {
+  display: flex;
+}
+
+.sign-input {
+  width: 358px;
+  height: 50px;
+  background-color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  padding: 15px 16px;
+  color: var(--white-color);
+  margin-right: 12px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sign-input::placeholder {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sign-input:focus,
+.sign-input:hover {
+  border-color: var(--blue-color);
+}
+
+.sign-part-button {
+  display: flex;
+  padding-left: 29px;
+  padding-top: 10px;
+  width: 200px;
+  height: 50px;
+  background: var(--blue-color);
+  border-radius: 4px;
+  border-color: transparent;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  color: var(--white-color);
+}
+
+.sign-part-button:hover,
+.sign-part-button:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.sign-icon {
+  fill: var(--white-color);
+  margin-left: 10px;
+}
+
+/* END of New DIV from HW6 Sign Us */
+
 /* Portfolio Page*/
 .main-section {
   background-color: var(--white-color);
@@ -739,13 +819,15 @@ overflow: hidden;
 }
 
 .modal {
+  display: block;
+  padding: 40px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 250ms;
   width: 528px;
-  height: 581px; 
+  min-height: 581px; 
   background-color:var(--white-color);
   border-radius: 4px; 
 }
@@ -769,6 +851,94 @@ overflow: hidden;
   height: 30px;
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
- 
-  
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-try-button:focus,
+.close-try-button:hover {
+  fill: var(--blue-color);
+}
+
+.modal-text {
+  margin-bottom: 12px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--brand-color);
+}
+
+.modal-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+/* Обратить внимание что label класс не задаём! */
+.modal-field label {
+  margin-bottom: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: var(--gray-color);
+}
+
+.name-wrap {
+  position: relative;
+}
+
+
+.modal-type-input {
+  padding: 12px 42px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-type-input:focus {
+  border-color: var(--blue-color);
+}
+.modal-type-input:focus + .modal-svg {
+  fill: var(--blue-color);
+}
+
+.modal-svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-comment {
+  width: 100%;
+  height: 120px;
+  padding-left: 16px;
+  padding-top: 12px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  resize: none;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-comment:focus {
+  border-color: var(--blue-color);
+}
+
+.user-comment::placeholder {
+  padding-top: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.15px;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
